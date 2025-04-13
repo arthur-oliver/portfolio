@@ -1,4 +1,5 @@
 /* NAVBAR */
+
 .navbar{
     display: grid;
     grid-template-columns: 7% 13% 80%;
@@ -34,4 +35,88 @@
     text-align: center;
     color: white;
     font-family: 'fonte_manuscrito_01';
+}
+
+/* MAIN */
+
+.section_intro{
+    padding: 4%;
+    background-color: #e1e1e1;
+}
+.section_intro > article{
+    width: 60%;
+    padding: 5%;
+    margin: 11% auto;
+    font-size: 3vw;
+    text-align: center;
+    
+}
+.section_conteudo{
+    padding: 4%;
+    background: linear-gradient(to bottom, white, #e1e1e1);
+}
+.section_conteudo article{
+    width: 100%;
+    padding: 0%;
+    margin-top: 5%;
+    min-height: 50vh;
+}
+.section_conteudo{
+    text-align: justify;
+}
+.section_conteudo h2{
+    text-indent: 2em;
+    font-size: 2vw;;
+}
+.section_conteudo p{
+    margin-top: 2%;
+    text-indent: 2em;
+    font-size: 1.5vw;
+}
+
+/* FOOTER */
+
+footer{
+    color: white;
+    background-color: #0c0c0c;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    font-size: 1vw;
+    text-align: center;
+    text-align: center;
+}
+footer p{
+    color: #717171;
+}
+footer a {
+    display: inline;
+    text-decoration: none;
+}
+footer a:visited {
+    color: white;
+}
+footer a:hover {
+    color: #0d9d2a;
+}
+footer a:active {
+    color: #0f531c;
+}
+footer h3 {
+    font-size: 1.5vw;
+}
+footer {
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* BODY */
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+main {
+    flex: 1 0 auto;
 }
