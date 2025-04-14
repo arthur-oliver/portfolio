@@ -23,13 +23,19 @@
     margin: 0% 1%;
 }
 #nav-title{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#nav-title_conteudo_1{
     margin: 0% 1%;
     padding: 0%;
     text-align: center;
     color: white;
     font-size: large;
 }
-#nav-title2{
+#nav-title_conteudo_2{
     margin: 0% 1%;
     padding: 0%;
     text-align: center;
