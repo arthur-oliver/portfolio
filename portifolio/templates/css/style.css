@@ -91,22 +91,55 @@ footer{
     text-align: center;
     text-align: center;
 }
-footer p{
-    color: #717171;
-}
 footer a {
     display: inline;
     text-decoration: none;
     color: white;
 }
-footer a:visited {
+.bxl-linkedin:visited {
     color: white;
 }
-footer a:hover {
-    color: #0d9d2a;
+.bxl-linkedin:hover {
+    color: #0077B5;
 }
-footer a:active {
-    color: #0f531c;
+.bxl-linkedin:active {
+    color: #20516b;
+}
+.bxl-whatsapp:visited {
+    color: white;
+}
+.bxl-whatsapp:hover {
+    color: #25D366;
+}
+.bxl-whatsapp:active {
+    color: #126532;
+}
+.bxl-gmail:visited {
+    color: white;
+}
+.bxl-gmail:hover {
+    color: #D44638;
+}
+.bxl-gmail:active {
+    color: #811207;
+}
+.bxl-instagram:visited {
+    color: white;
+}
+.bxl-instagram:hover {
+    color: #fb4869;
+}
+.bxl-instagram:active {
+    color: #822d3c;
+}
+.bxl-github:visited {
+    color: white;
+}
+.bxl-github:hover {
+    color: #a6a6a6;
+}
+.bxl-github:active {
+    color: #2d2d2d;
 }
 footer h3 {
     font-size: 1.5vw;
@@ -115,7 +148,28 @@ footer {
     overflow: hidden;
     flex-shrink: 0;
 }
-
+#footer-link{
+    padding-top: 2%;
+}
+#footer-link i{
+    margin: 0%;
+    font-size: 2vw
+}
+#footer-link a{
+    margin: 0% 2%;
+    padding: 0%;
+}
+#footer-copyright{
+    margin-top: 3%;
+    font-size: 0.9vw;
+    color: #808080;
+}
+#footer-copyright p{
+    margin: 0%;
+}
+#contato{
+    margin-top: 1%;
+}
 /* BODY */
 
 html, body {
