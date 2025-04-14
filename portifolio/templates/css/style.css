@@ -46,17 +46,24 @@
 /* MAIN */
 
 .section_intro{
+    height: 100vh;
     padding: 4%;
     background-color: #e1e1e1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
 }
 .section_intro > article{
     width: 60%;
     padding: 5%;
-    margin: 11% auto;
+    padding-top: 11%;
+    margin: auto;
     font-size: 3vw;
     text-align: center; 
 }
 .section_conteudo{
+    height: 100vh;
     padding: 4%;
     background: linear-gradient(to bottom, white, #e1e1e1);
 }
@@ -179,4 +186,27 @@ html, body {
 }
 main {
     flex: 1 0 auto;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 639px) {
+    .section_intro {
+        height: 50vh;
+        padding: auto;
+        margin-top: 11%;
+    }
+    .section_intro > article {
+        width: 60%;
+        font-size: auto;
+    }
+    .section_conteudo {
+        height: auto;
+    }
+    .section_conteudo h2 {
+        font-size: auto;
+    }
+    .section_conteudo p {
+        font-size: auto;
+    }
 }
