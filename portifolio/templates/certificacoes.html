@@ -14,25 +14,61 @@
     <style>
       main{
         display: grid;
+        grid-template-columns: 1fr 1fr;
         height: auto;
         margin-top: 11%;
-        column-gap: 50px;
-        grid-template-columns: auto auto;
+        margin-bottom: 5%;
+        padding: 3%;
+        row-gap: 3%;
+        column-gap: 3%;
       }
       main > section {
-        background-color: #f1f1f1;
+        background-color: #541818c6;
         border: 1px solid black;
         text-align: center;
+        padding: 1%;
+        border-radius: 20px;
       }
       .certificacao{
         display: grid;
       }
-      .certificacao * {
-        background-color: #f1f1f1;
+      .certificacao h4 {
         border: 1px solid black;
-        margin: 5%;
+        margin: 0% 2%;
+        padding: 1%;
         background-color: #0c89ac;
         text-align: center;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        border-radius: 20px;
+        font-size: 3vw;
+      }
+      .certificacao  p {
+        border: 1px solid black;
+        margin: 1% 2%;
+        padding: 0%;
+        background-color: #0cac47;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        border-radius: 20px;
+      }
+      .certificacao > p {
+        border: 1px solid black;
+        margin: 2% 2% 0% 2%;
+        padding: 0%;
+        background-color: #ac0c0c;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        border-radius: 20px;
+      }
+      .certificacao img {
+        border: 1px solid black;
+        margin: 5% auto 1% auto;
+        padding: 0%;
+        background-color: #ac0c89;
+        border-radius: 20px;
       }
     </style>
 </head>
@@ -82,20 +118,20 @@
         <section class="certificacao">
           <header><h4>nome certificação</h4></header>
             <p>data</p>
-            <p>descrição</p>
-            <img src="#" alt="#">
+            <span><p>descrição</p></span>
+            <a href="css/imagens/perfil.jpeg" target="_blank" title="Certificação"><img src="css/imagens/perfil.jpeg" alt="Certificação" style="width: 80%; height: 35vh;"></a>
         </section>
         <section class="certificacao">
           <header><h4>nome certificação</h4></header>
             <p>data</p>
-            <p>descrição</p>
-            <img src="#" alt="#">
+            <span><p>descrição</p></span>
+            <a href="css/imagens/teste.webp" target="_blank" title="Certificação"><img src="css/imagens/teste.webp" alt="Certificação" style="width: 80%; height: 35vh;"></a>
         </section>
         <section class="certificacao">
           <header><h4>nome certificação</h4></header>
             <p>data</p>
-            <p>descrição</p>
-            <img src="#" alt="#">
+            <span><p>descrição</p></span>
+            <a href="css/imagens/perfil.jpeg" target="_blank" title="Certificação"><img src="css/imagens/perfil.jpeg" alt="Certificação" style="width: 80%; height: 40vh;"></a>
         </section>
     </main>
     <!-- footer -->
