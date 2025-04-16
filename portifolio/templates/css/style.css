@@ -57,7 +57,7 @@
 .section_intro > article{
     width: 60%;
     padding: 5%;
-    padding-top: 11%;
+    padding-top: 15%;
     margin: auto;
     font-size: 3vw;
     text-align: center; 
@@ -211,17 +211,22 @@ main {
         font-size: auto;
     }
     footer {
-        width: 100vw;
+        max-width: 100%;
         padding: 2% 5%;
         box-sizing: border-box;
     }
     #footer-link i {
-        font-size: 5vw; /* Aumenta os ícones em telas pequenas, opcional */
+        font-size: 5vw;
+        flex-wrap: wrap;
     }
     footer h3 {
         font-size: 4vw;
     }
     #footer-copyright {
         font-size: 3vw;
+    }
+
+    body{
+        overflow-x: auto;
     }
 }
