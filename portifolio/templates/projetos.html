@@ -11,6 +11,59 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonte.css">
     <title>Portifólio - Projetos</title>
+    <style>
+    main{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: auto;
+      margin-top: 11%;
+      margin-bottom: 5%;
+      padding: 3%;
+      row-gap: 3%;
+      column-gap: 3%;
+    }
+    main > section {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      border-color:#0c0c0c;
+      border-width: 6px;
+      border-style: solid;
+      background: linear-gradient(to bottom, #b0b0b0, #e1e1e1);
+      text-align: center;
+      padding: 1%;
+      border-radius: 20px;
+    }
+    section article {
+      width: 95%;
+      height: 95%;
+      margin: 0% 2%;
+      padding: 1%;
+      text-align: justify;
+      overflow-wrap: break-word;
+      word-break: break-all;
+      border-radius: 20px;
+      font-size: medium;
+    }
+    header img{
+      border-radius: 20px;
+    }
+    i{
+      padding: 5%;
+      font-size: larger;
+      color: #0c0c0c;
+    }
+    .bxl-github:hover {
+    color: #a6a6a6;
+    }
+    .bxl-github:active {
+        color: #2d2d2d;
+    }
+    @media (max-width:690px){
+      section article{
+        font-size: small;
+      }
+    }
+    </style>
 </head>
 <body>
     <header>
@@ -55,7 +108,17 @@
     </header>
     <!-- main -->
     <main>
-        <section></section> 
+      <section class="projeto">
+        <header><img src="#" alt="Projeto" style="width: auto; height: 25vh;"></header>
+          <article><strong>Empresa parceira:</strong> <br> texto <br>
+            <strong>Sobre:</strong> <br> texto <br>
+            <strong>Contribuições Pessoais:</strong> <br> texto <br>            
+            <strong>Hard Skills:</strong> <br> texto <br>            
+            <strong>Soft Skills:</strong> <br> texto <br>            
+            <strong>Tecnologias utilizadas:</strong> <br> texto
+          </article>
+          <a href="#" target="_blank" title="Projeto"><i class="bx bxl-github"></i></a>
+      </section>
     </main>
     <!-- footer -->
     <footer>
