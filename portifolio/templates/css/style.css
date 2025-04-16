@@ -210,4 +210,18 @@ main {
     .section_conteudo p {
         font-size: auto;
     }
+    footer {
+        width: 100vw;
+        padding: 2% 5%;
+        box-sizing: border-box;
+    }
+    #footer-link i {
+        font-size: 5vw; /* Aumenta os ícones em telas pequenas, opcional */
+    }
+    footer h3 {
+        font-size: 4vw;
+    }
+    #footer-copyright {
+        font-size: 3vw;
+    }
 }
