@@ -12,61 +12,88 @@
     <link rel="stylesheet" href="css/fonte.css">
     <title>Portifólio - Destaques</title>
     <style>
-      main{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        height: auto;
-        margin-top: 11%;
-        margin-bottom: 5%;
-        padding: 3%;
-        row-gap: 3%;
-        column-gap: 3%;
-      }
-      main > section{
-        display: flex;
-        flex-flow: column nowrap;
-        border-color:#0c0c0c;
-        border-width: 6px;
-        border-style: solid;
-        background: linear-gradient(to bottom, #b0b0b0, #e1e1e1);
-        text-align: center;
-        padding: 1%;
-        border-radius: 20px;
-      }
-      section article{
-        width: 95%;
-        height: 95%;
-        margin: 0% 2%;
-        padding: 1%;
-        text-align: justify;
-        overflow-wrap: break-word;
-        word-break: break;
-        border-radius: 20px;
-        font-size: medium;
-      }
-      header img{
-        border-radius: 20px;
-      }
-      #i_2{
-        padding: 5%;
-        font-size: larger;
-        color: #0c0c0c;
-      }
-      #i_2 p{
-      font-family: fantasy;
-      color: #0c0c0c;
-      }
-      .bxl-github:hover {
-      color: #a6a6a6;
-      }
-      .bxl-github:active {
-          color: #2d2d2d;
-      }
-      @media (max-width:690px){
-        section article{
-          font-size: small;
+        main{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: auto;
+            margin-top: 11%;
+            margin-bottom: 5%;
+            padding: 3%;
+            row-gap: 3%;
+            column-gap: 3%;
+            padding-bottom: 20%;
         }
-      }
+        main > section {
+            border-color:#0c0c0c;
+            border-width: 6px;
+            border-style: solid;
+            background: linear-gradient(to bottom, #b0b0b0, #e1e1e1);
+            text-align: center;
+            padding: 1%;
+            border-radius: 20px;
+        }
+        .projetos{
+            display: grid;
+        }
+        .projetos h4 {
+            margin: 0% 2%;
+            padding: 1%;
+            text-align: center;
+            overflow-wrap: break-word;
+            border-radius: 20px;
+            font-size: 3vw;
+        }
+        .projetos  article {
+            border-style: none;
+            margin: 1% 2%;
+            padding: 0%;
+            text-align: justify;
+            overflow-wrap: break-word;
+            border-radius: 20px;
+            font-size: 1.6vw;
+        }
+        .projetos img {
+            margin: 5% auto 1% auto;
+            padding: 0%;
+            border-radius: 20px;
+        }
+        .projetos p{
+          text-indent: 5%;
+        }
+        #i_2{
+            padding: 5%;
+            font-size: larger;
+            color: #0c0c0c;
+        }
+        #i_2 p{
+            font-family: fantasy;
+            color: #0c0c0c;
+        }
+        .bxl-github:hover {
+            color: #a6a6a6;
+        }
+        .bxl-github:active {
+                color: #2d2d2d;
+        }
+        @media (max-width:690px){
+          .projetos article{
+            font-size: large;
+          }
+          main{
+            display: flex;
+            flex-flow: column nowrap;
+            height: auto;
+            margin-top: 11%;
+            margin-bottom: 5%;
+            padding: 3%;
+            row-gap: 3%;
+            column-gap: 3%;
+            padding-bottom: 20%;
+          }
+          main > section {
+            margin-top: 5%;
+          }
+        }
     </style>
 </head>
 <body>
@@ -112,17 +139,18 @@
     </header>
     <!-- main -->
     <main>
-      <section class="destaque">
-        <header><img src="css/imagens/projeto_api_01.gif" alt="Destaque" style="width: auto; height: 25vh;"></header>
-        <article><strong>Empresa parceira:</strong> <br> Fatec (faculdade). <br>
-          <strong>Sobre:</strong> <br> Trabalho de desenvolvimento web voltado para o âmbito de logística com cliente interno da Fatec, com o objetivo de testar os conhecimentos em API utilizando Scrum e desenvolver um site para análises gerais de importações e exportações de produtos do estado de SP com base no valor agregado, anos, relações exteriores, dentre outros. <br>
-          <strong>Contribuições Pessoais:</strong> <br> Auxiliei os integrantes no processo de pesquisa, atuei como Scrum Master, prezando agilidade nas entregas e removendo obstáculos internos da equipe. Realizei a criação de gráficos em python no Colab, desenvolvi os slides de apresentação, parcialmente HTML e CSS, organização no GitHub e Jira.<br>            
-          <strong>Hard Skills:</strong> <br> Scrum Master - Ferramentas: GitHub, Figma, VS Code, HTML, CSS, Python, Flask, Google Colab, Jira, Git. <br>
-          <strong>Soft Skills:</strong> <br> Proatividade, liderança, adaptação, comunicação.<br>            
-          <strong>Tecnologias utilizadas:</strong> <br> <i class="bx bxl-github"></i> GitHub - <i class="bx bxl-figma"></i> Figma - <i class="bx bxl-visual-studio"></i> VS Code - <i class="bx bxl-html5"></i> HTML - <i class="bx bxl-css3"></i> CSS - <i class="bx bxl-python"></i> Python - <i class="bx bxl-flask"></i> Flask - Google Colab - Jira - <i class="bx bxl-git"></i> Git.
-        </article>
-          <a href="https://github.com/arthur-oliver/API-Crows" target="_blank" title="Destaque"><i class="bx bxl-github" id="i_2"><p>GitHub</p></i></a>
-      </section>
+        <section class="projetos">
+            <header><h1>API 1º Semestre (Fatec) - Logística</h1></header>
+            <img src="css/imagens/projeto_api_01.gif" alt="Projeto" style="width: 80%; height: 35vh;">
+              <article><strong>Empresa parceira:</strong> <br> <p>Fatec (faculdade). </p><br>
+                <strong>Sobre:</strong> <br> <p>Trabalho de desenvolvimento web voltado para o âmbito de logística com cliente interno da Fatec, com o objetivo de testar os conhecimentos em API utilizando Scrum e desenvolver um site para análises gerais de importações e exportações de produtos do estado de SP com base no valor agregado, anos, relações exteriores, dentre outros. </p><br>
+                <strong>Contribuições Pessoais:</strong> <br> <p>Auxiliei os integrantes no processo de pesquisa, atuei como Scrum Master, prezando agilidade nas entregas e removendo obstáculos internos da equipe. Realizei a criação de gráficos em python no Colab, desenvolvi os slides da apresentação, parcialmente HTML e CSS, organização das plataformas GitHub e Jira. </p><br>            
+                <strong>Hard Skills:</strong> <br> <p>Atuei como Scrum Master e Dev. Team, alternando no decorrer das etapas (Sprints), desenvolvendo um espírito de liderança e aprendizado com foco na realização das tarefas.</p><br>
+                <strong>Soft Skills:</strong> <br> <p>Proatividade, liderança, adaptação e comunicação. </p><br>            
+                <strong>Tecnologias utilizadas:</strong> <br> <p><i class="bx bxl-github"></i> GitHub - <i class="bx bxl-figma"></i> Figma - <i class="bx bxl-visual-studio"></i> VS Code - <i class="bx bxl-html5"></i> HTML - <i class="bx bxl-css3"></i> CSS - <i class="bx bxl-python"></i> Python - <i class="bx bxl-flask"></i> Flask - Google Colab - Jira - <i class="bx bxl-git"></i> Git.</p>
+              </article>
+              <a href="https://github.com/arthur-oliver/API-Crows" target="_blank" title="Projeto"><i class="bx bxl-github"  id="i_2"><p> GitHub</p></i></a>
+          </section>
     </main>
     <!-- footer -->
     <footer>

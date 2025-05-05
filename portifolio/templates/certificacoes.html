@@ -35,12 +35,11 @@
       .certificacao{
         display: grid;
       }
-      .certificacao h4 {
+      .certificacao h2 {
         margin: 0% 2%;
         padding: 1%;
         text-align: center;
         overflow-wrap: break-word;
-        word-break: break-word;
         border-radius: 20px;
         font-size: 3vw;
       }
@@ -50,7 +49,6 @@
         padding: 0%;
         text-align: center;
         overflow-wrap: break-word;
-        word-break: break-all;
         border-radius: 20px;
         font-size: 1.6vw;
       }
@@ -59,7 +57,6 @@
         padding: 0%;
         text-align: center;
         overflow-wrap: break-word;
-        word-break: break-all;
         border-radius: 5px;
         font-size: 1.4vw;
       }
@@ -68,6 +65,31 @@
         padding: 0%;
         border-radius: 20px;
       }
+      @media (max-width:690px){
+          main{
+            display: flex;
+            flex-flow: column nowrap;
+            height: auto;
+            margin-top: 11%;
+            margin-bottom: 5%;
+            padding: 3%;
+            row-gap: 3%;
+            column-gap: 3%;
+            padding-bottom: 20%;
+          }
+          main > section {
+            margin-top: 5%;
+          }
+          .certificacao p{
+            font-size: large;
+          }
+          .certificacao > p{
+            font-size: medium;
+          }
+          .section_title{
+            font-size: xx-larger;
+          }
+        }
     </style>
 </head>
 <body>
@@ -114,13 +136,7 @@
     <!-- main -->
     <main>
         <section class="certificacao">
-          <header><h4>Marketing Digital</h4></header>
-            <p>09 agosto 2022</p>
-            <span><p>Curso Proficionalizante de Marketing Digital - Cephas - SJC</p></span>
-            <a href="css/imagens/certificacao_marketing_digital.jpeg" target="_blank" title="Certificação"><img src="css/imagens/certificacao_marketing_digital.jpeg" alt="Certificação" style="width: 80%; height: 35vh;"></a>
-        </section>
-        <section class="certificacao">
-          <header><h4>Marketing Digital</h4></header>
+          <header><h1 class="section_title">Marketing Digital</h1></header>
             <p>09 agosto 2022</p>
             <span><p>Curso Proficionalizante de Marketing Digital - Cephas - SJC</p></span>
             <a href="css/imagens/certificacao_marketing_digital.jpeg" target="_blank" title="Certificação"><img src="css/imagens/certificacao_marketing_digital.jpeg" alt="Certificação" style="width: 80%; height: 35vh;"></a>
