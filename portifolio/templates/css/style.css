@@ -197,9 +197,12 @@ main {
         padding: auto;
         margin-top: 11%;
     }
+    .section_intro{
+        height: 70vh;
+        padding: 0%;
+    }
     .section_intro > article {
         width: 60%;
-        font-size: auto;
     }
     .section_conteudo {
         height: auto;
