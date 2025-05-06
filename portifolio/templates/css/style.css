@@ -307,3 +307,20 @@ main {
         font-size: medium;
     }
 }
+
+/* ANIMAÇÃO (JS) */
+
+@keyframes Animacao_Padrao {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-top {
+  animation: Animacao_Padrao 2s ease-out; /* ease-out é para começar rápido e terminar devagar */ 
+}
