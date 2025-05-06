@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const introducaoArtigo = document.querySelector(".section_intro article");
+  const introducaoArtigo = document.querySelector(".section_intro article, .section_intro img");
   // const Nome_Variável = document.querySelector(".Local_Variável"); caso queira add + item
 
   // Cria um observador (verifica visibilidade do elemento na tela - se aparece ou não)
