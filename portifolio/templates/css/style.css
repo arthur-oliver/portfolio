@@ -270,6 +270,9 @@ main {
     .section_intro > article {
         font-size: xxx-large;
     }
+    .section_conteudo{
+        padding-bottom: 150%;
+    }
     .section_conteudo h2{
         font-size: xx-large;
     }
