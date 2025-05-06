@@ -68,6 +68,7 @@ main{
 .section_conteudo{
     height: 100vh;
     padding: 4%;
+    padding-bottom: 50%;
     background: linear-gradient(to bottom, white, #e1e1e1);
 }
 .section_conteudo article{
