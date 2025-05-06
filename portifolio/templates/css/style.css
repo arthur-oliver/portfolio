@@ -224,7 +224,7 @@ main {
         box-sizing: border-box;
     }
     #footer-link i {
-        font-size: 5vw;
+        font-size: 6vw;
         flex-wrap: wrap;
     }
     footer h3 {
@@ -236,5 +236,9 @@ main {
 
     body{
         overflow-x: auto;
+    }
+    #footer-link{
+        display: flex;
+        justify-content: space-around;
     }
 }
