@@ -182,6 +182,9 @@ footer {
 #contato{
     margin-top: 1%;
 }
+#meu_copyright{
+    padding-bottom: 2.5%;
+}
 
 /* BODY */
 
@@ -240,5 +243,16 @@ main {
     #footer-link{
         display: flex;
         justify-content: space-around;
+    }
+    #contato{
+        margin-bottom: 6%;
+    }
+    #meu_copyright{
+        padding-top: 6%;
+        padding-bottom: 2.5%;
+        font-size: smaller;
+    }
+    #ext_copyright{
+        font-size: x-small;
     }
 }
