@@ -30,7 +30,7 @@
         .section_conteudo{
           padding-bottom: 70%;
         }
-        #ferramentas{
+        .competencias{
           display: grid;
           grid-template-columns: 1fr 5fr;
         }
@@ -60,6 +60,27 @@
             padding-top: 2.5%;
             padding-bottom: 2.5%;
           }
+        }
+        @media (min-width: 640px) and (max-width: 1024px){
+            .section_intro > article {
+                font-size: xx-large;
+            }
+            .section_conteudo h1{
+                font-size: xx-large;
+            }
+            .section_conteudo{
+                padding-bottom: 150%;
+            }
+            .competencias{
+                font-size: x-large;
+          }
+            .competencias_2{
+                font-size: x-large;
+          }
+          h1{
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+          } 
         }
       </style>
 </head>
@@ -112,7 +133,7 @@
       <section class="section_conteudo">
           <article>
               <h1><strong>🧠 Hard Skills <br> (Habilidades Técnicas)</strong></h1>
-              <ul id="ferramentas">
+              <ul class="competencias">
                 <li>HTML</li>
                 <i class="bx bxl-html5"></i>
                 <li>CSS</li>
@@ -144,7 +165,7 @@
                 <li>Administração</li>
               </ul>
               <h1><strong>🤝🏽 Soft Skills <br> (Habilidades Comportamentais)</strong></h1>
-              <ul>
+              <ul class="competencias_2">
                 <li>Liderança</li>
                 <li>Proatividade</li>
                 <li>Adaptação</li>

@@ -233,10 +233,6 @@ main {
     footer h3 {
         font-size: 4vw;
     }
-    #footer-copyright {
-        font-size: 3vw;
-    }
-
     body{
         overflow-x: auto;
     }
@@ -254,5 +250,60 @@ main {
     }
     #ext_copyright{
         font-size: x-small;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1024px){
+    nav{
+        font-size: x-large;
+    }
+    .navbar-nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #nav-title{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .section_intro > article {
+        font-size: xxx-large;
+    }
+    .section_conteudo h2{
+        font-size: xx-large;
+    }
+    .section_conteudo p{
+        font-size: x-large;
+    }
+    footer {
+        max-width: 100%;
+        padding: 2% 5%;
+        box-sizing: border-box;
+    }
+    #footer-link i {
+        font-size: 6vw;
+        flex-wrap: wrap;
+    }
+    footer h3 {
+        font-size: 4vw;
+    }
+    body{
+        overflow-x: auto;
+    }
+    #footer-link{
+        display: flex;
+        justify-content: space-around;
+    }
+    #contato{
+        margin-bottom: 6%;
+    }
+    #meu_copyright{
+        padding-top: 6%;
+        padding-bottom: 2.5%;
+        font-size: large;
+    }
+    #ext_copyright{
+        font-size: medium;
     }
 }
