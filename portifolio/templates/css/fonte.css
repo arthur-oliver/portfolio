@@ -4,4 +4,10 @@
     font-weight: normal;
     font-style: normal;
   }
+@font-face {
+    font-family: 'fonte_padrao_01';
+    src: url('fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
   

@@ -5,6 +5,7 @@
     grid-template-columns: 7% 13% 80%;
     background-color: #0c0c0c;
     padding: 0.5%;
+    font-family: 'fonte_padrao_01';
 }
 .navbar-nav{
     display: flex;
@@ -44,7 +45,9 @@
 }
 
 /* MAIN */
-
+main{
+    font-family: 'fonte_padrao_01';
+}
 .section_intro{
     height: 100vh;
     padding: 4%;
@@ -97,6 +100,7 @@ footer{
     font-size: 1vw;
     text-align: center;
     text-align: center;
+    font-family: 'fonte_padrao_01';
 }
 footer a {
     display: inline;
