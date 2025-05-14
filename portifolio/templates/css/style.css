@@ -19,6 +19,7 @@
 .navbar-toggler{
     margin: 20%;
     padding: 0%;
+    border-style: none !important;
 }
 .nav-brand{
     margin: 0% 1%;
