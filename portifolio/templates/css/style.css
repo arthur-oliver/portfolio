@@ -90,6 +90,13 @@ main{
     text-indent: 2em;
     font-size: 1.5vw;
 }
+iframe {
+    margin: 0%;
+    margin-top: 6%;
+    padding: 0%;
+    width: 40vw;
+    height: 60vh;
+}
 
 /* FOOTER */
 
