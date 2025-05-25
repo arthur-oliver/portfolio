@@ -11,71 +11,71 @@
     <link rel="stylesheet" href="projetos/css_projeto/projetos.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonte.css">
-    <title>Portifólio - Projetos</title>
+    <title>Portfólio - Destaques</title>
     <style>
+      main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 0%;
+        margin-right: auto;
+        padding: 3%;
+        row-gap: 3%;
+        column-gap: 10%;
+        padding-bottom: 20%;
+        align-content: center;
+      }
+      #i_2{
+          padding: 5%;
+          font-size: larger;
+          color: #0c0c0c;
+      }
+      #i_2 p{
+          font-family: fantasy;
+          color: #0c0c0c;
+      }
+      .bxl-github:hover {
+          color: #a6a6a6;
+      }
+      .bxl-github:active {
+              color: #2d2d2d;
+      }
+      .projetos {
+        display: none;
+      }
+      @media (max-width:690px){
+        .projetos article{
+          font-size: large;
+        }
         main{
-          display: grid;
-          grid-template-columns: 1fr 1fr;
+          display: flex;
+          flex-flow: column nowrap;
           height: auto;
-          margin-top: 5%;
+          margin-top: 11%;
           margin-bottom: 5%;
-          margin-left: 0%;
+          margin-left: auto;
           margin-right: auto;
           padding: 3%;
           row-gap: 3%;
-          column-gap: 10%;
+          column-gap: 3%;
           padding-bottom: 20%;
-          align-content: center;
         }
-        #i_2{
-            padding: 5%;
-            font-size: larger;
-            color: #0c0c0c;
+        main > iframe {
+          margin-top: 5vh;
         }
-        #i_2 p{
-            font-family: fantasy;
-            color: #0c0c0c;
+        iframe{
+          width: 90vw;
+          height: 50vh;
         }
-        .bxl-github:hover {
-            color: #a6a6a6;
-        }
-        .bxl-github:active {
-                color: #2d2d2d;
-        }
-        .projetos {
+        .projeto_iframe {
           display: none;
         }
-        @media (max-width:690px){
-          .projetos article{
-            font-size: large;
-          }
-          main{
-            display: flex;
-            flex-flow: column nowrap;
-            height: auto;
-            margin-top: 11%;
-            margin-bottom: 5%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 3%;
-            row-gap: 3%;
-            column-gap: 3%;
-            padding-bottom: 20%;
-          }
-          main > iframe {
-            margin-top: 5vh;
-          }
-          iframe{
-            width: 90vw;
-            height: 50vh;
-          }
-          .projeto_iframe {
-            display: none;
-          }
-          .projetos {
-            display: block;
-          }
+        .projetos {
+          display: block;
         }
+      }
     </style>
 </head>
 <body>
@@ -89,7 +89,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="nav-title">
-              <p id="nav-title_conteudo_1">Portifólio</p>
+              <p id="nav-title_conteudo_1">Portfólio</p>
               <p id="nav-title_conteudo_2">Arthur Óliver</p>
             </div>
             <div class="collapse navbar-collapse" id="botao_aberto">
@@ -101,13 +101,13 @@
                       <a class="nav-link" href="curriculo.html">Currículo</a>
                     </li>
                     <li class="nav-item mx-auto text-center">
-                      <a class="nav-link" href="#">Projetos</a>
+                      <a class="nav-link" href="projetos.html">Projetos</a>
                     </li>
                     <li class="nav-ite mx-auto text-centerm">
                       <a class="nav-link" href="habilidades.html">Habilidades</a>
                     </li>
                     <li class="nav-item mx-auto text-center">
-                      <a class="nav-link" href="destaques.html">Destaques</a>
+                      <a class="nav-link" href="#">Destaques</a>
                     </li>
                     <li class="nav-item mx-auto text-center">
                       <a class="nav-link" href="certificacoes.html">Certificados</a>
@@ -137,28 +137,12 @@
         </article>
         <a href="https://github.com/arthur-oliver/API-Crows" target="_blank" title="Projeto"><i class="bx bxl-github"  id="i_2"><p> GitHub</p></i></a>
       </section>
-      <!-- projeto -->
-      <div class="projeto_iframe">
-        <iframe src="projetos/projeto_packup_01.html" frameborder="0"></iframe>
-      </div>
-      <section class="projetos">
-        <header><h1><strong>TCC (TI) "PACKUP" - Gerenciamento de Estoque Mobile</strong></h1></header>
-        <img src="projetos/css_projeto/imagens_projeto/projeto_packup_01.gif" alt="Projeto" style="width: 80%; height: 35vh;">
-          <article><strong>Instituição parceira:</strong> <br> <p>Instituto IDEIA (Técnico). </p><br>
-            <strong>Sobre:</strong> <br> <p>Trabalho de desenvolvimento mobile (celular) voltado para o âmbito de controle de estoque, que visa auxiliar no processo de gestão de empresas independente da área de atuação. O projeto foi desenvolvido para o TCC do Técnico em Informática e com o objetivo de aplicar conhecimentos gerais do curso de forma integrada. </p><br>
-            <strong>Contribuições Pessoais:</strong> <br> <p>Participei de todas as etapas do processo, desde a idealização e desenvolvimento do protótipo até o backend (programação de funcionalidades gerais, incluindo banco de dados, validações e cálculos) e frontend (interface do usuário - design em geral), até a documentação escrita do aplicativo (caderno). Minnha função, além de programador, também foi controlar as entregas e administrar a equipe. </p><br>
-            <strong>Hard Skills:</strong> <br> <p>Atuei como progrmador utilizando as tecnologias listadas abaixo, design, gestão da equipe e apto para atuação como técnico em informática. </p><br>
-            <strong>Soft Skills:</strong> <br><p>Proatividade, liderança, adaptação, comunicação, resiliência, criatividade (design) e organização. </p><br>
-            <strong>Tecnologias utilizadas:</strong> <br> <p><i class="bx bxl-google"></i> Google  Drive - <i class="bx bxl-firebase"></i> Firebase (Cloud Firestore) - <i class="bx bxl-microsoft"></i> Microsoft Offfice (Word e Power Point) - <i class="bx bxl-visual-studio"></i> VS Code - <i class="bx bxl-html5"></i> HTML - <i class="bx bxl-css3"></i> CSS - <i class="bx bxl-flutter"></i> Flutter - <i class="bx bxl-nodejs"></i> Node - <i class="bx bxl-android"></i> Android Studio - Dart.</p>
-          </article>
-          <a href="https://github.com/arthur-oliver/tcc-ti.git" target="_blank" title="Projeto"><i class="bx bxl-github"  id="i_2"><p> GitHub</p></i></a>
-      </section>
     </main>
     <!-- footer -->
     <footer>
       <section>
         <h3 id="contato">Contato:</h3>
-        <nav id="footer-link">    
+        <nav id="footer-link">
           <a href="https://www.linkedin.com/in/arthur-%C3%B3liver-728123350/" target="_blank"><i class='bx bxl-linkedin'></i></a>
           <!-- <a href="https://api.whatsapp.com/send?phone=5512983172261" target="_blank"><i class='bx bxl-whatsapp'></i></a> -->
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arthuroliverrossialves@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>

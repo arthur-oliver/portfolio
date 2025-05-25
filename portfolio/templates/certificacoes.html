@@ -6,65 +6,90 @@
     <!-- Links Externos -->
     <link rel="stylesheet" href="css/normalize.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonte.css">
-    <title>Portifólio - Currículo</title>
+    <title>Portfólio - Certificações</title>
     <style>
-      .section_intro{
-      height: 100vh;
-      padding: 4%;
-      margin-top: 11%;
-      background-color: white;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      align-content: center;
-      }
-      .section_intro img{
-        max-width: 100%;
-        max-height: 100%;
-        width: auto;
+      main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         height: auto;
-        margin: auto;
+        margin-top: 11%;
+        margin-bottom: 5%;
+        padding: 3%;
+        row-gap: 3%;
+        column-gap: 3%;
+        padding-bottom: 20%;
       }
-      #link_curriculo{
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        margin: 10px;
-        padding: 2%;
-      }
-      #link_curriculo a{
-        background-color: #e1e1e1;
-        max-width: 100%;
-        max-height: 100%;
-        padding: 2vw;
-        width: auto;
-        height: auto;
-        margin-top: 0%;
-        margin-bottom: 10%;
-        border-radius: 10px;
-        border-color: #959595;
-        border-width: 3px;
+      main > section {
+        border-color:#0c0c0c;
+        border-width: 6px;
         border-style: solid;
+        background: linear-gradient(to bottom, #b0b0b0, #e1e1e1);
+        text-align: center;
+        padding: 1%;
+        border-radius: 20px;
       }
-      #link_curriculo i{
-        font-size: larger;
-        color: black;
+      .certificacao{
+        display: grid;
+      }
+      .certificacao h2 {
+        margin: 0% 2%;
+        padding: 1%;
+        text-align: center;
+        overflow-wrap: break-word;
+        border-radius: 20px;
+        font-size: 3vw;
+      }
+      .certificacao  p {
+        border-style: none;
+        margin: 1% 2%;
+        padding: 0%;
+        text-align: center;
+        overflow-wrap: break-word;
+        border-radius: 20px;
+        font-size: 1.6vw;
+      }
+      .certificacao > p {
+        margin: 2% 35% 0% 35%;
+        padding: 0%;
+        text-align: center;
+        overflow-wrap: break-word;
+        border-radius: 5px;
+        font-size: 1.4vw;
+      }
+      .certificacao img {
+        margin: 5% auto 1% auto;
+        padding: 0%;
+        border-radius: 20px;
       }
       @media (max-width:690px){
-        #link_curriculo{
-          margin-top: 0%;
-          padding-top: 0%;
+          main{
+            display: flex;
+            flex-flow: column nowrap;
+            height: auto;
+            margin-top: 11%;
+            margin-bottom: 5%;
+            padding: 3%;
+            row-gap: 3%;
+            column-gap: 3%;
+            padding-bottom: 20%;
+          }
+          main > section {
+            margin-top: 5%;
+          }
+          .certificacao p{
+            font-size: large;
+          }
+          .certificacao > p{
+            font-size: medium;
+          }
+          .section_title{
+            font-size: xx-larger;
+          }
         }
-        .section_intro{
-          max-height: 70vh;
-        }
-      }
     </style>
 </head>
 <body>
@@ -87,7 +112,7 @@
                       <a class="nav-link" href="index.html">Início</a>
                     </li>
                     <li class="nav-item mx-auto text-center">
-                      <a class="nav-link" href="#">Currículo</a>
+                      <a class="nav-link" href="curriculo.html">Currículo</a>
                     </li>
                     <li class="nav-item mx-auto text-center">
                       <a class="nav-link" href="projetos.html">Projetos</a>
@@ -99,7 +124,7 @@
                       <a class="nav-link" href="destaques.html">Destaques</a>
                     </li>
                     <li class="nav-item mx-auto text-center">
-                      <a class="nav-link" href="certificacoes.html">Certificados</a>
+                      <a class="nav-link" href="#">Certificados</a>
                     </li>
                     <li class="nav-item mx-auto text-center">
                       <a class="nav-link" href="#contato">Contato</a>
@@ -109,13 +134,25 @@
         </nav>
     </header>
     <!-- main -->
-      <main>
-        <section class="section_intro">
-          <img src="css/imagens/curriculo.png" alt="Currículo" title="Currículo">
+    <main>
+        <section class="certificacao">
+          <header><h1 class="section_title"><strong>Marketing Digital</strong></h1></header>
+            <p>09 agosto 2022</p>
+            <span><p>Curso Proficionalizante de Marketing Digital - Cephas - SJC</p></span>
+            <a href="css/imagens/certificacao_marketing_digital.jpeg" target="_blank" title="Certificação"><img src="css/imagens/certificacao_marketing_digital.jpeg" alt="Certificação" style="width: 80%; height: 35vh;"></a>
         </section>
-        <section id="link_curriculo">
-            <a href="css/imagens/curriculo.pdf" target="_blank"><i class='bi bi-download'></i></a>
-        </section>  
+        <section class="certificacao">
+          <header><h1 class="section_title"><strong>Instrutor de Kung Fu</strong></h1></header>
+            <p>28 setembro 2023</p>
+            <span><p>Graduado lecionar aulas de artes marciais (faixa marrom - 1º grau) - Associação Long Teh - SJC</p></span>
+            <a href="css/imagens/certificacao_instrutor_kf.jpg" target="_blank" title="Certificação"><img src="css/imagens/certificacao_instrutor_kf.jpg" alt="Certificação" style="width: 80%; height: 35vh;"></a>
+        </section>
+        <section class="certificacao">
+          <header><h1 class="section_title"><strong>Suporte Básico de Vida (SBV)</strong></h1></header>
+            <p>11 abril 2023</p>
+            <span><p>Palestra de suporte básico de vida para atendimentos pré-hospitalares - iBRAPH - SJC</p></span>
+            <a href="css/imagens/certificacao_sbv.jpg" target="_blank" title="Certificação"><img src="css/imagens/certificacao_sbv.jpg" alt="Certificação" style="width: 80%; height: 35vh;"></a>
+        </section>
     </main>
     <!-- footer -->
     <footer>
