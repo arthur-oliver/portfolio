@@ -23,6 +23,7 @@
 }
 .nav-brand{
     margin: 0% 1%;
+    padding: 5%;
 }
 #nav-title{
     display: flex;
@@ -208,6 +209,21 @@ main {
 /* RESPONSIVIDADE */
 
 @media (max-width: 639px) {
+    .nav-brand{
+    padding: 10%;
+    }
+    .navbar{
+    display: grid;
+    grid-template-columns: 15% 15% 65%;
+    background-color: #0c0c0c;
+    padding: 0.5%;
+    }
+    #nav-title{
+        padding: 0%;
+        margin-left: 0%;
+        margin-right: 25%;
+        text-align: left;
+    }
     .section_intro {
         height: 50vh;
         padding: auto;
