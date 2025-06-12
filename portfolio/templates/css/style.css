@@ -213,10 +213,10 @@ main {
     padding: 10%;
     }
     .navbar{
-    display: grid;
-    grid-template-columns: 15% 15% 65%;
-    background-color: #0c0c0c;
-    padding: 0.5%;
+        display: grid;
+        grid-template-columns: 15% 15% 65%;
+        background-color: #0c0c0c;
+        padding: 0.5%;
     }
     #nav-title{
         padding: 0%;
@@ -245,6 +245,11 @@ main {
     .section_conteudo p {
         font-size: auto;
     }
+    main > section{
+        border-color:#949494;
+        border-width: 1px;
+        border-style: solid;
+    }
     footer {
         max-width: 100%;
         padding: 2% 5%;
@@ -272,7 +277,7 @@ main {
         padding-bottom: 2.5%;
         font-size: small;
     }
-    #ext_copyright{
+    #text_copyright{
         font-size: x-small;
     }
 }
@@ -330,7 +335,7 @@ main {
         padding-bottom: 2.5%;
         font-size: large;
     }
-    #ext_copyright{
+    #text_copyright{
         font-size: medium;
     }
 }
