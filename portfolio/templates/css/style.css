@@ -256,6 +256,9 @@ main {
     .section_conteudo{
         border-style: none;
     }
+    #link_curriculo{
+        border-style: none;
+    }
     footer {
         max-width: 100%;
         padding: 2% 5%;
