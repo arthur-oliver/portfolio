@@ -250,6 +250,12 @@ main {
         border-width: 1px;
         border-style: solid;
     }
+    .section_intro{
+        border-style: none;
+    }
+    .section_conteudo{
+        border-style: none;
+    }
     footer {
         max-width: 100%;
         padding: 2% 5%;
