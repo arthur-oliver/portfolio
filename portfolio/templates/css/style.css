@@ -3,7 +3,8 @@
 .navbar{
     display: grid;
     grid-template-columns: 7% 13% 80%;
-    background-color: #0c0c0c;
+    background-color: rgba(12, 12, 12, 0.8); /* Preto com transparência */
+    backdrop-filter: blur(10px);
     padding: 0.5%;
     font-family: 'fonte_padrao_01';
 }
@@ -214,9 +215,7 @@ main {
     }
     .navbar{
         display: grid;
-        grid-template-columns: 15% 15% 65%;
-        background-color: #0c0c0c;
-        padding: 0.5%;
+        grid-template-columns: 7% 13% 80%;
     }
     #nav-title{
         padding: 0%;
