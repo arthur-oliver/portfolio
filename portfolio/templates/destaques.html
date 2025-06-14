@@ -1,160 +1,199 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Links Externos -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="projetos/css_projeto/projetos.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fonte.css">
-    <title>Portfólio - Destaques</title>
-    <style>
-      main{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Links Externos -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="projetos/css_projeto/projetos.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fonte.css">
+  <title>Portfólio - Destaques</title>
+  <style>
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: auto;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      margin-left: 0%;
+      margin-right: auto;
+      padding: 3%;
+      row-gap: 3%;
+      column-gap: 10%;
+      padding-bottom: 20%;
+      align-content: center;
+    }
+
+    #i_2 {
+      padding: 5%;
+      font-size: larger;
+      color: #0c0c0c;
+    }
+
+    #i_2 p {
+      font-family: fantasy;
+      color: #0c0c0c;
+    }
+
+    .bxl-github:hover {
+      color: #a6a6a6;
+    }
+
+    .bxl-github:active {
+      color: #2d2d2d;
+    }
+
+    .projetos {
+      display: none;
+    }
+
+    @media (max-width:690px) {
+      .projetos article {
+        font-size: large;
+      }
+
+      main {
+        display: flex;
+        flex-flow: column nowrap;
         height: auto;
-        margin-top: 5%;
+        margin-top: 11%;
         margin-bottom: 5%;
-        margin-left: 0%;
+        margin-left: auto;
         margin-right: auto;
         padding: 3%;
         row-gap: 3%;
-        column-gap: 10%;
+        column-gap: 3%;
         padding-bottom: 20%;
-        align-content: center;
       }
-      #i_2{
-          padding: 5%;
-          font-size: larger;
-          color: #0c0c0c;
+
+      main>iframe {
+        margin-top: 5vh;
       }
-      #i_2 p{
-          font-family: fantasy;
-          color: #0c0c0c;
+
+      iframe {
+        width: 90vw;
+        height: 50vh;
       }
-      .bxl-github:hover {
-          color: #a6a6a6;
-      }
-      .bxl-github:active {
-              color: #2d2d2d;
-      }
-      .projetos {
+
+      .projeto_iframe {
         display: none;
       }
-      @media (max-width:690px){
-        .projetos article{
-          font-size: large;
-        }
-        main{
-          display: flex;
-          flex-flow: column nowrap;
-          height: auto;
-          margin-top: 11%;
-          margin-bottom: 5%;
-          margin-left: auto;
-          margin-right: auto;
-          padding: 3%;
-          row-gap: 3%;
-          column-gap: 3%;
-          padding-bottom: 20%;
-        }
-        main > iframe {
-          margin-top: 5vh;
-        }
-        iframe{
-          width: 90vw;
-          height: 50vh;
-        }
-        .projeto_iframe {
-          display: none;
-        }
-        .projetos {
-          display: block;
-        }
+
+      .projetos {
+        display: block;
       }
-    </style>
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <!-- navbar -->
-        <nav class="navbar navbar-expand-sm container-fluid navbar-dark fixed-top">
-            <div class="nav-brand">
-                <img class="rounded-pill" src="css/imagens/perfil.jpeg" alt="Perfil" style="width:100%; height:100%;">
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#botao_aberto">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="nav-title">
-              <p id="nav-title_conteudo_1">Portfólio</p>
-              <p id="nav-title_conteudo_2">Arthur Óliver</p>
-            </div>
-            <div class="collapse navbar-collapse" id="botao_aberto">
-                <ul class="navbar-nav">
-                    <li class="nav-item mx-auto text-center">
-                      <a class="nav-link" href="index.html">Início</a>
-                    </li>
-                    <li class="nav-item mx-auto text-center">
-                      <a class="nav-link" href="curriculo.html">Currículo</a>
-                    </li>
-                    <li class="nav-item mx-auto text-center">
-                      <a class="nav-link" href="projetos.html">Projetos</a>
-                    </li>
-                    <li class="nav-ite mx-auto text-centerm">
-                      <a class="nav-link" href="habilidades.html">Habilidades</a>
-                    </li>
-                    <li class="nav-item mx-auto text-center">
-                      <a class="nav-link" href="#">Destaques</a>
-                    </li>
-                    <li class="nav-item mx-auto text-center">
-                      <a class="nav-link" href="certificacoes.html">Certificados</a>
-                    </li>
-                    <li class="nav-item mx-auto text-center">
-                      <a class="nav-link" href="#contato">Contato</a>
-                    </li>
-                  </ul>
-            </div>
-        </nav>
-    </header>
-    <!-- main -->
-    <main>
-      <!-- projeto -->
-      <div class="projeto_iframe">
-        <iframe src="projetos/projeto_api_01.html" frameborder="0"></iframe>
+  <header>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm container-fluid navbar-dark fixed-top">
+      <div class="nav-brand">
+        <img class="rounded-pill" src="css/imagens/perfil.jpeg" alt="Perfil" style="width:100%; height:100%;">
       </div>
-      <section class="projetos">
-        <header><h1><strong>API 1º Semestre (Fatec) - Logística</strong></h1></header>
-        <img src="projetos/css_projeto/imagens_projeto/projeto_api_01.gif" alt="Projeto" style="width: 80%; height: 35vh;">
-        <article><strong>Empresa parceira:</strong> <br> <p>Fatec (faculdade). </p><br>
-            <strong>Sobre:</strong> <br> <p>Trabalho de desenvolvimento web voltado para o âmbito de logística com cliente interno da Fatec, com o objetivo de testar os conhecimentos em API utilizando Scrum e desenvolver um site para análises gerais de importações e exportações de produtos do estado de SP com base no valor agregado, anos, relações exteriores, dentre outros. </p><br>
-            <strong>Contribuições Pessoais:</strong> <br> <p>Auxiliei os integrantes no processo de pesquisa, atuei como Scrum Master, prezando agilidade nas entregas e removendo obstáculos internos da equipe. Realizei a criação de gráficos em python no Colab, desenvolvi os slides da apresentação, parcialmente HTML e CSS, organização das plataformas GitHub e Jira. </p><br>            
-            <strong>Hard Skills:</strong> <br> <p>Atuei como Scrum Master e Dev. Team, alternando no decorrer das etapas (Sprints), desenvolvendo um espírito de liderança e aprendizado com foco na realização das tarefas. </p><br>
-            <strong>Soft Skills:</strong> <br> <p>Proatividade, liderança, adaptação e comunicação. </p><br>            
-            <strong>Tecnologias utilizadas:</strong> <br> <p><i class="bx bxl-github"></i> GitHub - <i class="bx bxl-figma"></i> Figma - <i class="bx bxl-visual-studio"></i> VS Code - <i class="bx bxl-html5"></i> HTML - <i class="bx bxl-css3"></i> CSS - <i class="bx bxl-python"></i> Python - <i class="bx bxl-flask"></i> Flask - Google Colab - Jira - <i class="bx bxl-git"></i> Git.</p>
-        </article>
-        <a href="https://github.com/arthur-oliver/API-Crows" target="_blank" title="Projeto"><i class="bx bxl-github"  id="i_2"><p> GitHub</p></i></a>
-      </section>
-    </main>
-    <!-- footer -->
-    <footer>
-      <section>
-        <h3 id="contato">Contato:</h3>
-        <nav id="footer-link">
-          <a href="https://www.linkedin.com/in/arthur-%C3%B3liver-728123350/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-          <!-- <a href="https://api.whatsapp.com/send?phone=5512983172261" target="_blank"><i class='bx bxl-whatsapp'></i></a> -->
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arthuroliverrossialves@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
-          <a href="https://www.instagram.com/arthur.oliverrossi/" target="_blank"><i class='bx bxl-instagram'></i></a>
-          <a href="https://github.com/arthur-oliver" target="_blank"><i class='bx bxl-github'></i></a>
-        </nav>
-      </section>
-      <section id="footer-copyright">
-        <p id="meu_copyright">Copyright © 2025 by Arthur Óliver | All Rights Reserved</p>
-        <p id="text_copyright">Icons by <a href="https://github.com/atisawd/boxicons" target="_blank">Boxicons</a> - Licensed under MIT</p>
-        <p id="text_copyright">Font by <a href="https://github.com/andrew-paglinawan/QuicksandFamily" target="_blank">QuicksandFamily</a> - Licensed under the SIL Open Font License</p>
-      </section>
-    </footer>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#botao_aberto">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav-title">
+        <p id="nav-title_conteudo_1">Portfólio</p>
+        <p id="nav-title_conteudo_2">Arthur Óliver</p>
+      </div>
+      <div class="collapse navbar-collapse" id="botao_aberto">
+        <ul class="navbar-nav">
+          <li class="nav-item mx-auto text-center">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+          <li class="nav-item mx-auto text-center">
+            <a class="nav-link" href="curriculo.html">Currículo</a>
+          </li>
+          <li class="nav-item mx-auto text-center">
+            <a class="nav-link" href="projetos.html">Projetos</a>
+          </li>
+          <li class="nav-ite mx-auto text-centerm">
+            <a class="nav-link" href="habilidades.html">Habilidades</a>
+          </li>
+          <li class="nav-item mx-auto text-center">
+            <a class="nav-link" href="#">Destaques</a>
+          </li>
+          <li class="nav-item mx-auto text-center">
+            <a class="nav-link" href="certificacoes.html">Certificados</a>
+          </li>
+          <li class="nav-item mx-auto text-center">
+            <a class="nav-link" href="#contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- main -->
+  <main>
+    <!-- projeto -->
+    <div class="projeto_iframe">
+      <iframe src="projetos/projeto_api_01.html" frameborder="0"></iframe>
+    </div>
+    <section class="projetos">
+      <header>
+        <h1><strong>API 1º Semestre (Fatec) - Logística</strong></h1>
+      </header>
+      <img src="projetos/css_projeto/imagens_projeto/projeto_api_01.gif" alt="Projeto"
+        style="width: 80%; height: 35vh;">
+      <article><strong>Empresa parceira:</strong> <br>
+        <p>Fatec (faculdade). </p><br>
+        <strong>Sobre:</strong> <br>
+        <p>Trabalho de desenvolvimento web voltado para o âmbito de logística com cliente interno da Fatec, com o
+          objetivo de testar os conhecimentos em API utilizando Scrum e desenvolver um site para análises gerais de
+          importações e exportações de produtos do estado de SP com base no valor agregado, anos, relações exteriores,
+          dentre outros. </p><br>
+        <strong>Contribuições Pessoais:</strong> <br>
+        <p>Auxiliei os integrantes no processo de pesquisa, atuei como Scrum Master, prezando agilidade nas entregas e
+          removendo obstáculos internos da equipe. Realizei a criação de gráficos em python no Colab, desenvolvi os
+          slides da apresentação, parcialmente HTML e CSS, organização das plataformas GitHub e Jira. </p><br>
+        <strong>Hard Skills:</strong> <br>
+        <p>Atuei como Scrum Master e Dev. Team, alternando no decorrer das etapas (Sprints), desenvolvendo um espírito
+          de liderança e aprendizado com foco na realização das tarefas. </p><br>
+        <strong>Soft Skills:</strong> <br>
+        <p>Proatividade, liderança, adaptação e comunicação. </p><br>
+        <strong>Tecnologias utilizadas:</strong> <br>
+        <p><i class="bx bxl-github"></i> GitHub - <i class="bx bxl-figma"></i> Figma - <i
+            class="bx bxl-visual-studio"></i> VS Code - <i class="bx bxl-html5"></i> HTML - <i class="bx bxl-css3"></i>
+          CSS - <i class="bx bxl-python"></i> Python - <i class="bx bxl-flask"></i> Flask - Google Colab - Jira - <i
+            class="bx bxl-git"></i> Git.</p>
+      </article>
+      <a href="https://github.com/arthur-oliver/API-Crows" target="_blank" title="Projeto"><i class="bx bxl-github"
+          id="i_2">
+          <p> GitHub</p>
+        </i></a>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer>
+    <section>
+      <h3 id="contato">Contato:</h3>
+      <nav id="footer-link">
+        <a href="https://www.linkedin.com/in/arthur-%C3%B3liver-728123350/" target="_blank"><i
+            class='bx bxl-linkedin'></i></a>
+        <!-- <a href="https://api.whatsapp.com/send?phone=5512983172261" target="_blank"><i class='bx bxl-whatsapp'></i></a> -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arthuroliverrossialves@gmail.com" target="_blank"><i
+            class='bx bxl-gmail'></i></a>
+        <a href="https://www.instagram.com/arthur.oliverrossi/" target="_blank"><i class='bx bxl-instagram'></i></a>
+        <a href="https://github.com/arthur-oliver" target="_blank"><i class='bx bxl-github'></i></a>
+      </nav>
+    </section>
+    <section id="footer-copyright">
+      <p id="meu_copyright">Copyright © 2025 by Arthur Óliver | All Rights Reserved</p>
+      <p id="text_copyright">Icons by <a href="https://github.com/atisawd/boxicons" target="_blank">Boxicons</a> -
+        Licensed under MIT</p>
+      <p id="text_copyright">Font by <a href="https://github.com/andrew-paglinawan/QuicksandFamily"
+          target="_blank">QuicksandFamily</a> - Licensed under the SIL Open Font License</p>
+    </section>
+  </footer>
 </body>
+
 </html>
