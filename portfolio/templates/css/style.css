@@ -99,6 +99,13 @@ iframe {
     width: 40vw;
     height: 60vh;
 }
+.ferramentas{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10%;
+    margin: 0%;
+    gap: 5%;
+}
 
 /* FOOTER */
 
