@@ -112,7 +112,16 @@ iframe {
   padding: 0%;
   margin: 0%;
 }
-
+#perfil_entrada{
+    margin: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#perfil_entrada > .rounded-pill{
+    width:25%;
+    position: absolute;
+}
 /* FOOTER */
 
 footer{
@@ -268,6 +277,12 @@ main {
     .section_conteudo{
         border-style: none;
     }
+    #perfil_entrada{
+        margin: 30%;
+    }
+    #perfil_entrada > .rounded-pill{
+        width:40%;
+    }
     #link_curriculo{
         border-style: none;
     }
@@ -328,6 +343,12 @@ main {
     }
     .section_conteudo p{
         font-size: x-large;
+    }
+        #perfil_entrada{
+        margin: 30%;
+    }
+    #perfil_entrada > .rounded-pill{
+        width:40%;
     }
     footer {
         max-width: 100%;

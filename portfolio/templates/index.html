@@ -19,6 +19,10 @@
       font-size: medium;
     }
 
+    .section_conteudo {
+      padding-bottom: 70vw;
+    }
+
     @media (max-width: 639px) {
       article {
         font-size: large !important;
@@ -33,9 +37,15 @@
       }
 
       .section_conteudo {
-        padding-bottom: 20%;
+        padding-bottom: 10%;
         padding-left: 6%;
         padding-right: 6%;
+      }
+    }
+
+    @media (min-width: 640px) and (max-width: 1024px) {
+      .section_conteudo {
+        padding-bottom: 195%;
       }
     }
   </style>
@@ -92,6 +102,9 @@
     </section>
     <section class="section_conteudo">
       <article id="main_article">
+        <div id="perfil_entrada">
+          <img class="rounded-pill" src="css/imagens/perfil.jpeg" alt="Perfil">
+        </div>
         <h2>Um pouco sobre mim:</h2>
         <p>Sou Arthur Óliver, atualmente cursando o ensino superior em Desenvolvimento de Software Multiplataforma (DSM)
           pela Fatec Jessen Vidal — uma formação voltada ao desenvolvimento de aplicativos mobile e aplicações baseadas
