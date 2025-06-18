@@ -333,10 +333,11 @@ main {
         align-items: center;
     }
     .section_intro > article {
+        padding-top: 30%;
         font-size: xxx-large;
     }
     .section_conteudo{
-        padding-bottom: 150%;
+        padding-bottom: 190%;
     }
     .section_conteudo h2{
         font-size: xx-large;
