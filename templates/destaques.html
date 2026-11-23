@@ -1,298 +1,305 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conquistas e destaques de Arthur Óliver Rossi Alves." />
+    <meta name="author" content="Arthur Óliver Rossi Alves" />
+    <title>Destaques | Arthur Óliver Rossi Alves</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Links Externos -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="projetos/css_projeto/projetos.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animacao_computer.css">
-  <link rel="stylesheet" href="css/fonte.css">
-  <title>Portfólio - Destaques</title>
-  <style>
-    main {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      height: auto;
-      margin-top: 5%;
-      margin-bottom: 5%;
-      margin-left: 0%;
-      margin-right: auto;
-      padding: 3%;
-      row-gap: 3%;
-      column-gap: 10%;
-      padding-bottom: 20%;
-      align-content: center;
-    }
+    <!-- Ativa as animações apenas quando o JavaScript estiver disponível -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
 
-    #i_2 {
-      padding: 5%;
-      font-size: larger;
-      color: #0c0c0c;
-    }
+    <!-- Ícones -->
+    <link rel="icon" href="../assets/img/servidor.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
 
-    #i_2 p {
-      font-family: fantasy;
-      color: #0c0c0c;
-    }
+    <!-- Estilos e scripts -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/index.js" defer></script>
+  </head>
 
-    .bxl-github:hover {
-      color: #a6a6a6;
-    }
+  <body id="topo">
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-    .bxl-github:active {
-      color: #2d2d2d;
-    }
+    <!-- Navbar -->
+    <header class="navbar">
+      <nav class="container navbar__conteudo" aria-label="Navegação principal">
+        <a class="navbar__marca" href="../index.html">
+          <img class="navbar__foto" src="../assets/img/perfil.jpeg" alt="" width="48" height="48" />
+          <span class="navbar__titulo">
+            <span class="navbar__titulo-portfolio">Portfólio</span>
+            <span class="navbar__titulo-nome">Arthur Óliver</span>
+          </span>
+        </a>
 
-    .projetos {
-      display: none;
-    }
+        <button
+          class="navbar__botao"
+          type="button"
+          aria-controls="menu-principal"
+          aria-expanded="false"
+          aria-label="Abrir menu de navegação"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-    @media (max-width:690px) {
-      .projetos article {
-        font-size: large;
-      }
+        <div class="navbar__menu" id="menu-principal">
+          <ul class="navbar__lista">
+            <li><a class="navbar__link" href="../index.html">Início</a></li>
+            <li><a class="navbar__link" href="curriculo.html">Currículo</a></li>
+            <li><a class="navbar__link" href="projetos.html">Projetos</a></li>
+            <li><a class="navbar__link" href="habilidades.html">Habilidades</a></li>
+            <li><a class="navbar__link" href="#topo" aria-current="page">Destaques</a></li>
+            <li><a class="navbar__link" href="certificacoes.html">Certificados</a></li>
+            <li><a class="navbar__link" href="#contato">Contato</a></li>
+          </ul>
+          <img class="navbar__servidor" src="../assets/img/servidor.svg" alt="" width="34" height="52" />
+        </div>
+      </nav>
+    </header>
 
-      main {
-        display: flex;
-        flex-flow: column nowrap;
-        height: auto;
-        margin-top: 11%;
-        margin-bottom: 5%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 3%;
-        row-gap: 3%;
-        column-gap: 3%;
-        padding-bottom: 20%;
-      }
+    <main id="conteudo">
+      <!-- Cabeçalho da página -->
+      <section class="cabecalho-pagina">
+        <div class="container animar animar--topo">
+          <h1 class="cabecalho-pagina__titulo">Destaques</h1>
+          <p class="cabecalho-pagina__texto">
+            Conquistas e resultados que representam minha dedicação, constância e busca pela excelência.
+          </p>
+        </div>
+      </section>
 
-      main>iframe {
-        margin-top: 5vh;
-      }
+      <!-- Conquistas -->
+      <section class="secao secao--cinza">
+        <div class="container">
+          <h2 class="secao__titulo">Conquistas</h2>
+          <div class="grade grade--2">
+            <article class="cartao conquista animar">
+              <p class="conquista__numero">4º</p>
+              <h3 class="cartao__titulo">lugar entre 450 soldados</h3>
+              <p>
+                Classificação por mérito entre os soldados incorporados na FAB em 2025, considerando provas teóricas,
+                testes físicos e comportamento militar.
+              </p>
+            </article>
+            <article class="cartao conquista animar">
+              <p class="conquista__numero">3</p>
+              <h3 class="cartao__titulo">medalhas internacionais</h3>
+              <p>Conquistadas em competições internacionais de Kung Fu, modalidade que pratico desde os 12 anos.</p>
+            </article>
+            <article class="cartao conquista animar">
+              <p class="conquista__numero">Scrum</p>
+              <h3 class="cartao__titulo">Master no API</h3>
+              <p>
+                Condução do time no Projeto Integrador do 1º semestre, removendo impedimentos e organizando as entregas.
+              </p>
+            </article>
+            <article class="cartao conquista animar">
+              <p class="conquista__numero">Instrutor</p>
+              <h3 class="cartao__titulo">de Kung Fu</h3>
+              <p>Graduado para lecionar artes marciais (faixa marrom – 1º grau) pela Associação Long Teh.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-      iframe {
-        width: 90vw;
-        height: 50vh;
-      }
-
-      .projeto_iframe {
-        display: none;
-      }
-
-      .projetos {
-        display: block;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-sm container-fluid navbar-dark fixed-top">
-      <div class="nav-brand">
-        <img class="rounded-pill" src="css/imagens/perfil.jpeg" alt="Perfil" style="width:100%; height:100%;">
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#botao_aberto">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="nav-title">
-        <p id="nav-title_conteudo_1">Portfólio</p>
-        <p id="nav-title_conteudo_2">Arthur Óliver</p>
-      </div>
-      <div class="collapse navbar-collapse" id="botao_aberto">
-        <ul class="navbar-nav">
-          <li class="nav-item mx-auto text-center">
-            <a class="nav-link" href="../index.html">Início</a>
-          </li>
-          <li class="nav-item mx-auto text-center">
-            <a class="nav-link" href="curriculo.html">Currículo</a>
-          </li>
-          <li class="nav-item mx-auto text-center">
-            <a class="nav-link" href="projetos.html">Projetos</a>
-          </li>
-          <li class="nav-ite mx-auto text-centerm">
-            <a class="nav-link" href="habilidades.html">Habilidades</a>
-          </li>
-          <li class="nav-item mx-auto text-center">
-            <a class="nav-link" href="#">Destaques</a>
-          </li>
-          <li class="nav-item mx-auto text-center">
-            <a class="nav-link" href="certificacoes.html">Certificados</a>
-          </li>
-          <li class="nav-item mx-auto text-center">
-            <a class="nav-link" href="#contato">Contato</a>
-          </li>
-          <li class="nav-item mx-auto text-center">
-            <div class="container_SevMini" style="margin-top: 50%;">
-              <div class="SevMini">
-                <svg width="52" height="45" viewBox="0 0 74 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M40 76.5L72 57V69.8615C72 70.5673 71.628 71.2209 71.0211 71.5812L40 90V76.5Z" fill="#888888">
-                  </path>
-                  <path d="M34 75.7077L2 57V69.8615C2 70.5673 2.37203 71.2209 2.97892 71.5812L34 90V75.7077Z"
-                    fill="#777777"></path>
-                  <path d="M34 76.5H40V90H34V76.5Z" fill="#888888"></path>
-                  <path
-                    d="M3.27905 55.593L35.2806 37.5438C36.3478 36.9419 37.6522 36.9419 38.7194 37.5438L70.721 55.593C71.7294 56.1618 71.7406 57.6102 70.7411 58.1945L39.2712 76.593C37.8682 77.4133 36.1318 77.4133 34.7288 76.593L3.25887 58.1945C2.25937 57.6102 2.27061 56.1618 3.27905 55.593Z"
-                    fill="#333333" stroke="#888888"></path>
-                  <path d="M40 79L72 60V70.4001C72 71.1151 71.6183 71.7758 70.9987 72.1329L40 90V79Z" fill="#444444">
-                  </path>
-                  <path d="M34 79L3 61V71.5751L34 90V79Z" fill="#555555"></path>
-                  <path id="strobe_color1" d="M58 72.5L60.5 71V74L58 75.5V72.5Z" fill="#FF715E"></path>
-                  <path id="strobe_color2" d="M63 69.5L65.5 68V71L63 72.5V69.5Z" fill="#17e300b4"></path>
-                  <path d="M68 66.5L70.5 65V68L68 69.5V66.5Z" fill="#FF715E"></path>
-                  <path d="M40 58.5L72 39V51.8615C72 52.5673 71.628 53.2209 71.0211 53.5812L40 72V58.5Z" fill="#888888">
-                  </path>
-                  <path d="M34 57.7077L2 39V51.8615C2 52.5673 2.37203 53.2209 2.97892 53.5812L34 72V57.7077Z"
-                    fill="#777777"></path>
-                  <path d="M34 58.5H40V72H34V58.5Z" fill="#888888"></path>
-                  <path
-                    d="M3.27905 37.593L35.2806 19.5438C36.3478 18.9419 37.6522 18.9419 38.7194 19.5438L70.721 37.593C71.7294 38.1618 71.7406 39.6102 70.7411 40.1945L39.2712 58.593C37.8682 59.4133 36.1318 59.4133 34.7288 58.593L3.25887 40.1945C2.25937 39.6102 2.27061 38.1618 3.27905 37.593Z"
-                    fill="#333333" stroke="#888888"></path>
-                  <path d="M40 61L72 42V52.4001C72 53.1151 71.6183 53.7758 70.9987 54.1329L40 72V61Z" fill="#444444">
-                  </path>
-                  <path d="M34 61L3 43V53.5751L34 72V61Z" fill="#555555"></path>
-                  <path d="M58 54.5L60.5 53V56L58 57.5V54.5Z" fill="#FF715E"></path>
-                  <path d="M63 51.5L65.5 50V53L63 54.5V51.5Z" fill="black"></path>
-                  <path id="strobe_color1" d="M63 51.5L65.5 50V53L63 54.5V51.5Z" fill="#FF715E"></path>
-                  <path d="M68 48.5L70.5 47V50L68 51.5V48.5Z" fill="#FF715E"></path>
-                  <path d="M40 40.5L72 21V33.8615C72 34.5673 71.628 35.2209 71.0211 35.5812L40 54V40.5Z" fill="#888888">
-                  </path>
-                  <path d="M34 39.7077L2 21V33.8615C2 34.5673 2.37203 35.2209 2.97892 35.5812L34 54V39.7077Z"
-                    fill="#777777"></path>
-                  <path d="M34 40.5H40V54H34V40.5Z" fill="#888888"></path>
-                  <path
-                    d="M3.27905 19.593L35.2806 1.54381C36.3478 0.941872 37.6522 0.941872 38.7194 1.54381L70.721 19.593C71.7294 20.1618 71.7406 21.6102 70.7411 22.1945L39.2712 40.593C37.8682 41.4133 36.1318 41.4133 34.7288 40.593L3.25887 22.1945C2.25937 21.6102 2.27061 20.1618 3.27905 19.593Z"
-                    fill="#666666" stroke="#888888"></path>
-                  <path d="M40 43L72 24V34.4001C72 35.1151 71.6183 35.7758 70.9987 36.1329L40 54V43Z" fill="#444444">
-                  </path>
-                  <path d="M34 43L3 25V35.5751L34 54V43Z" fill="#555555"></path>
-                  <path d="M68 30.5L70.5 29V32L68 33.5V30.5Z" fill="#FF715E"></path>
-                  <path id="strobe_color3" d="M58 36.5L60.5 35V38L58 39.5V36.5Z" fill="#FF715E"></path>
-                  <path d="M63 33.5L65.5 32V35L63 36.5V33.5Z" fill="#FF715E"></path>
-                  <path
-                    d="M20.1902 22.0719C18.8101 21.3026 18.8252 19.3119 20.2168 18.5636L36.1054 10.0189C37.2884 9.3827 38.7116 9.3827 39.8946 10.0189L55.7832 18.5636C57.1748 19.3119 57.1899 21.3026 55.8098 22.0719L40.4345 30.6429C38.9211 31.4865 37.0789 31.4865 35.5655 30.6429L20.1902 22.0719Z"
-                    fill="#888888"></path>
-                  <path
-                    d="M11 52.755C11 51.9801 11.8432 51.4997 12.5098 51.8947L23.5196 58.419C24.1273 58.7792 24.5 59.4332 24.5 60.1396V60.245C24.5 61.0199 23.6568 61.5003 22.9902 61.1053L11.9804 54.581C11.3727 54.2208 11 53.5668 11 52.8604V52.755Z"
-                    fill="#888888"></path>
-                  <mask id="mask0_2_176" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="11" y="51" width="14"
-                    height="11">
-                    <path
-                      d="M11 52.755C11 51.9801 11.8432 51.4997 12.5098 51.8947L23.5196 58.419C24.1273 58.7792 24.5 59.4332 24.5 60.1396V60.245C24.5 61.0199 23.6568 61.5003 22.9902 61.1053L11.9804 54.581C11.3727 54.2208 11 53.5668 11 52.8604V52.755Z"
-                      fill="#888888"></path>
-                  </mask>
-                  <g mask="url(#mask0_2_176)">
-                    <path
-                      d="M11.5 52.7417C11.5 51.9803 12.3349 51.5138 12.9833 51.9128L23.5482 58.4143C24.1397 58.7783 24.5 59.4231 24.5 60.1176V61.5L12.4598 54.4195C11.8651 54.0698 11.5 53.4315 11.5 52.7417V52.7417Z"
-                      fill="#333333"></path>
-                  </g>
-                  <mask id="mask1_2_176" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="19" y="9" width="38"
-                    height="23">
-                    <path
-                      d="M20.1902 22.0719C18.8101 21.3026 18.8252 19.3119 20.2168 18.5636L36.1054 10.0189C37.2884 9.3827 38.7116 9.3827 39.8946 10.0189L55.7832 18.5636C57.1748 19.3119 57.1899 21.3026 55.8098 22.0719L40.4345 30.6429C38.9211 31.4865 37.0789 31.4865 35.5655 30.6429L20.1902 22.0719Z"
-                      fill="#888888"></path>
-                  </mask>
-                  <g mask="url(#mask1_2_176)">
-                    <path
-                      d="M18 21.3115L36.167 11.9451C37.3171 11.3521 38.6829 11.3521 39.833 11.9451L58 21.3115L40.3567 30.7405C38.8841 31.5275 37.1159 31.5275 35.6433 30.7405L18 21.3115Z"
-                      fill="#444444"></path>
-                  </g>
-                  <path d="M37.447 21.565L35 19.9799L37.6941 18.66L40.141 20.245L37.447 21.565Z" fill="#FF715E"></path>
-                  <path d="M48.9738 30.8646L47.0741 29.7745L49.1792 28.684L51.0789 29.7741L48.9738 30.8646Z"
-                    fill="#444444"></path>
-                  <path d="M52.0661 29.0093L50.1635 27.9242L52.2657 26.8282L54.1682 27.9133L52.0661 29.0093Z"
-                    fill="#444444"></path>
-                  <path id="strobe_led1"
-                    d="M55.1521 27.1464L53.2538 26.054L55.3602 24.9661L57.2585 26.0586L55.1521 27.1464Z" fill="#999999">
-                  </path>
-                </svg>
+      <!-- Projeto em destaque -->
+      <section class="secao">
+        <div class="container">
+          <h2 class="secao__titulo">Projeto em destaque</h2>
+          <article class="projeto animar" id="api-2">
+            <div class="projeto__midia">
+              <img
+                src="../assets/img/projetos/projeto_api_02.gif"
+                alt="Demonstração do projeto Sistema de Ordens de Serviço"
+                loading="lazy"
+              />
+            </div>
+            <div class="projeto__corpo">
+              <span class="projeto__rotulo">API · 2º semestre</span>
+              <h3 class="projeto__titulo">Sistema de Ordens de Serviço</h3>
+              <p class="projeto__parceiro">
+                <strong>Empresa parceira:</strong>
+                ALTAVE
+              </p>
+              <div class="projeto__campos">
+                <div class="projeto__campo">
+                  <h4>
+                    <i class="bx bx-error-circle"></i>
+                    Problema
+                  </h4>
+                  <p>
+                    A necessidade de registrar, priorizar e acompanhar as ordens de serviço trocadas entre os setores da
+                    empresa — como solicitações de novos produtos e de manutenções —, com controle claro sobre as etapas
+                    de execução, os responsáveis e as prioridades de cada demanda.
+                  </p>
+                </div>
+                <div class="projeto__campo">
+                  <h4>
+                    <i class="bx bx-check-circle"></i>
+                    Solução desenvolvida
+                  </h4>
+                  <p>
+                    Sistema web para gerenciamento de Ordens de Serviço (OS) que centraliza as solicitações, permite
+                    acompanhar o andamento de cada etapa e define responsáveis e prioridades, melhorando a comunicação
+                    entre os setores.
+                  </p>
+                </div>
+                <div class="projeto__campo projeto__campo--largo">
+                  <h4>
+                    <i class="bx bx-user"></i>
+                    Contribuições pessoais
+                  </h4>
+                  <p>
+                    Atuei no time de desenvolvimento, principalmente no front-end: construção de interfaces e
+                    organização dos componentes da aplicação, buscando uma experiência de uso intuitiva. Também
+                    participei da organização das atividades e do acompanhamento das entregas durante as Sprints.
+                  </p>
+                </div>
+                <div class="projeto__campo">
+                  <h4>
+                    <i class="bx bx-code-block"></i>
+                    Hard skills
+                  </h4>
+                  <p>
+                    Desenvolvimento front-end com React e TypeScript, estilização com Tailwind CSS, uso do Vite,
+                    integração com APIs REST, noções de banco de dados MySQL e versionamento com Git e GitHub.
+                  </p>
+                </div>
+                <div class="projeto__campo">
+                  <h4>
+                    <i class="bx bx-group"></i>
+                    Soft skills
+                  </h4>
+                  <p>
+                    Trabalho em equipe, comunicação, colaboração, organização, proatividade, resolução de problemas e
+                    adaptação a mudanças de requisitos.
+                  </p>
+                </div>
               </div>
-              <div class="Ghost">
-                <svg width="30" height="18" viewBox="0 0 60 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.96545 19.4296C0.643777 18.6484 0.658726 16.7309 1.99242 15.9705L28.0186 1.12982C29.2467 0.429534 30.7533 0.429533 31.9814 1.12982L58.0076 15.9704C59.3413 16.7309 59.3562 18.6484 58.0346 19.4296L32.5442 34.4962C30.9749 35.4238 29.0251 35.4238 27.4558 34.4962L1.96545 19.4296Z"
-                    fill="#3C4F6D"></path>
-                </svg>
+              <div class="projeto__campo projeto__tecnologias">
+                <h4>
+                  <i class="bx bx-wrench"></i>
+                  Tecnologias utilizadas
+                </h4>
+                <ul class="tags">
+                  <li class="tag">
+                    <i class="bx bxl-react"></i>
+                    React
+                  </li>
+                  <li class="tag">
+                    <i class="bx bxl-typescript"></i>
+                    TypeScript
+                  </li>
+                  <li class="tag">
+                    <i class="bx bxl-tailwind-css"></i>
+                    Tailwind CSS
+                  </li>
+                  <li class="tag">Vite</li>
+                  <li class="tag">
+                    <i class="bx bxl-nodejs"></i>
+                    Node.js
+                  </li>
+                  <li class="tag">Express</li>
+                  <li class="tag">MySQL</li>
+                  <li class="tag">
+                    <i class="bx bxl-html5"></i>
+                    HTML
+                  </li>
+                  <li class="tag">
+                    <i class="bx bxl-css3"></i>
+                    CSS
+                  </li>
+                  <li class="tag">
+                    <i class="bx bxl-git"></i>
+                    Git
+                  </li>
+                  <li class="tag">
+                    <i class="bx bxl-github"></i>
+                    GitHub
+                  </li>
+                  <li class="tag">Jira</li>
+                </ul>
+              </div>
+              <div class="projeto__rodape">
+                <a
+                  class="botao botao--primario"
+                  href="https://github.com/leovmatiusso/API2_DSM_SprintingCheetahs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bx bxl-github"></i>
+                  Ver repositório
+                </a>
               </div>
             </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé / Contato -->
+    <footer class="rodape" id="contato">
+      <div class="container">
+        <h2 class="rodape__titulo">Contato</h2>
+        <p class="rodape__email">
+          <a href="mailto:arthuroliverrossialves@gmail.com">arthuroliverrossialves@gmail.com</a>
+        </p>
+
+        <ul class="rodape__redes">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/arthur-%C3%B3liver-728123350/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i class="bx bxl-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/arthur-oliver" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="bx bxl-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:arthuroliverrossialves@gmail.com" aria-label="E-mail"><i class="bx bxl-gmail"></i></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/aoliver.rossi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="bx bxl-instagram"></i>
+            </a>
           </li>
         </ul>
-      </div>
-    </nav>
-  </header>
-  <!-- main -->
-  <main>
-    <!-- projeto -->
-    <div class="projeto_iframe">
-      <iframe src="projetos/projeto_api_01.html" frameborder="0"></iframe>
-    </div>
-    <section class="projetos">
-      <header>
-        <h1><strong>API 1º Semestre (Fatec) - Logística</strong></h1>
-      </header>
-      <img src="projetos/css_projeto/imagens_projeto/projeto_api_01.gif" alt="Projeto"
-        style="width: 80%; height: 35vh;">
-      <article><strong>Instituição parceira:</strong> <br>
-        <p>Fatec (faculdade). </p><br>
-        <strong>Sobre:</strong> <br>
-        <p>Trabalho de desenvolvimento web voltado para o âmbito de logística com cliente interno da Fatec, com o
-          objetivo de testar os conhecimentos em API utilizando Scrum e desenvolver um site para análises gerais de
-          importações e exportações de produtos do estado de SP com base no valor agregado, anos, relações exteriores,
-          dentre outros. </p><br>
-        <strong>Contribuições Pessoais:</strong> <br>
-        <p>Auxiliei os integrantes no processo de pesquisa, atuei como Scrum Master, prezando agilidade nas entregas e
-          removendo obstáculos internos da equipe. Realizei a criação de gráficos em python no Colab, desenvolvi os
-          slides da apresentação, parcialmente HTML e CSS, organização das plataformas GitHub e Jira. </p><br>
-        <strong>Hard Skills (Habilidades Técnicas):</strong> <br>
-        <p>Atuei como Scrum Master e Dev. Team, alternando no decorrer das etapas (Sprints), desenvolvendo um espírito
-          de liderança e aprendizado com foco na realização das tarefas. </p><br>
-        <strong>
-          <p class="soft_skills_responsivo">Soft Skills (Habilidades Comportamentais):</p>
-        </strong>
-        <p>Proatividade, liderança, adaptação e comunicação. </p><br>
-        <strong>Tecnologias utilizadas:</strong> <br>
-        <p><i class="bx bxl-github"></i> GitHub - <i class="bx bxl-figma"></i> Figma - <i
-            class="bx bxl-visual-studio"></i> VS Code - <i class="bx bxl-html5"></i> HTML - <i class="bx bxl-css3"></i>
-          CSS - <i class="bx bxl-python"></i> Python - <i class="bx bxl-flask"></i> Flask - Google Colab - Jira - <i
-            class="bx bxl-git"></i> Git.</p>
-      </article>
-      <a href="https://github.com/arthur-oliver/api-crows" target="_blank" title="Projeto"
-        style="display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 10px; background-color: #b0b0b0; border: none; margin: 0% auto 10% auto; text-decoration: none; color: inherit; width: 250px;">
-        <i class="bx bx-link" style="font-size: 1.2rem;"></i>
-        <span style="font-size: 1rem; line-height: 1;">acessar</span>
-        <i class="bx bxl-github" id="i_2" style="font-size: 1.4rem;"></i>
-      </a>
-    </section>
-  </main>
-  <!-- footer -->
-  <footer>
-    <section>
-      <h3 id="contato">Contato:</h3>
-      <nav id="footer-link">
-        <a href="https://www.linkedin.com/in/arthur-%C3%B3liver-728123350/" target="_blank"><i
-            class='bx bxl-linkedin'></i></a>
-        <!-- <a href="https://api.whatsapp.com/send?phone=5512983172261" target="_blank"><i class='bx bxl-whatsapp'></i></a> -->
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arthuroliverrossialves@gmail.com" target="_blank"><i
-            class='bx bxl-gmail'></i></a>
-        <a href="https://www.instagram.com/aoliver.rossi/" target="_blank"><i class='bx bxl-instagram'></i></a>
-        <a href="https://github.com/arthur-oliver" target="_blank"><i class='bx bxl-github'></i></a>
-      </nav>
-    </section>
-    <section id="footer-copyright">
-      <p id="meu_copyright">Copyright © 2025 by Arthur Óliver | All Rights Reserved</p>
-      <p id="text_copyright">Icons by <a href="https://github.com/atisawd/boxicons" target="_blank">Boxicons</a> -
-        Licensed under MIT</p>
-      <p id="text_copyright">Font by <a href="https://github.com/andrew-paglinawan/QuicksandFamily"
-          target="_blank">QuicksandFamily</a> - Licensed under the SIL Open Font License</p>
-    </section>
-  </footer>
-</body>
 
+        <div class="rodape__creditos">
+          <p>
+            Copyright ©
+            <span id="ano-atual">2026</span>
+            Arthur Óliver Rossi Alves | Todos os direitos reservados
+          </p>
+          <p>
+            Ícones por
+            <a href="https://github.com/atisawd/boxicons" target="_blank" rel="noopener noreferrer">Boxicons</a>
+            (MIT) e
+            <a href="https://devicon.dev" target="_blank" rel="noopener noreferrer">Devicon</a>
+            (MIT) · Fontes
+            <a href="https://github.com/andrew-paglinawan/QuicksandFamily" target="_blank" rel="noopener noreferrer">
+              Quicksand
+            </a>
+            e Dancing Script (SIL Open Font License)
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
