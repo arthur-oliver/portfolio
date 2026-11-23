@@ -79,6 +79,21 @@
             <li><a href="#profissionais">Profissionais</a></li>
             <li><a href="#pessoais">Pessoais</a></li>
           </ul>
+
+          <!-- Filtro por tecnologia (exibido apenas com JavaScript ativo) -->
+          <div class="filtro" role="group" aria-label="Filtrar projetos por tecnologia" hidden>
+            <span class="filtro__rotulo">Filtrar por tecnologia:</span>
+            <button class="filtro__botao" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button class="filtro__botao" type="button" data-filtro="React" aria-pressed="false">React</button>
+            <button class="filtro__botao" type="button" data-filtro="TypeScript" aria-pressed="false">
+              TypeScript
+            </button>
+            <button class="filtro__botao" type="button" data-filtro="Node.js" aria-pressed="false">Node.js</button>
+            <button class="filtro__botao" type="button" data-filtro="MySQL" aria-pressed="false">MySQL</button>
+            <button class="filtro__botao" type="button" data-filtro="Python" aria-pressed="false">Python</button>
+            <button class="filtro__botao" type="button" data-filtro="Flutter" aria-pressed="false">Flutter</button>
+          </div>
+          <p class="filtro__resultado" aria-live="polite"></p>
         </div>
       </section>
 
@@ -598,7 +613,11 @@
       <section class="secao" id="profissionais">
         <div class="container">
           <h2 class="secao__titulo">Projetos Profissionais</h2>
-          <p class="secao__subtitulo">Atividades desenvolvidas nos vínculos profissionais que já tive.</p>
+          <p class="secao__subtitulo">
+            Ainda não atuei profissionalmente como desenvolvedor de software. Apresento abaixo as atividades que
+            desenvolvi nos vínculos profissionais que tive, pois elas formaram competências que aplico nos meus
+            projetos.
+          </p>
           <ol class="linha-tempo">
             <li class="linha-tempo__item animar">
               <span class="linha-tempo__periodo">2025 – 2026</span>

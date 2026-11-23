@@ -13,7 +13,8 @@
    8. Páginas específicas
    9. Rodapé
    10. Animações
-   11. Responsividade (tablet e desktop)
+   11. Interatividade
+   12. Responsividade (tablet e desktop)
    ========================================================================== */
 
 /* 1. FONTES
@@ -217,6 +218,9 @@ ul {
   background-color: var(--cor-escura-transparente);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  transition:
+    background-color var(--transicao),
+    box-shadow var(--transicao);
 }
 
 .navbar__conteudo {
@@ -224,6 +228,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   height: var(--altura-navbar);
+  transition: height var(--transicao);
 }
 
 .navbar__marca {
@@ -237,6 +242,9 @@ ul {
 .navbar__foto {
   width: 48px;
   height: 48px;
+  transition:
+    width var(--transicao),
+    height var(--transicao);
   border: 2px solid var(--cor-cinza-medio);
   border-radius: 50%;
   object-fit: cover;
@@ -299,7 +307,7 @@ ul {
 /* Menu */
 .navbar__menu {
   position: absolute;
-  top: var(--altura-navbar);
+  top: 100%;
   left: 0;
   right: 0;
   display: none;
@@ -382,9 +390,16 @@ ul {
 }
 
 .hero__cargo {
-  margin-bottom: 1.25rem;
+  min-height: 2.8em; /* reserva espaço para o efeito de digitação não mover a página */
+  margin-bottom: 0.25rem;
   font-size: 1.1rem;
+  line-height: 1.4;
   font-weight: 600;
+  color: var(--cor-texto-suave);
+}
+
+.hero__instituicao {
+  margin-bottom: 1.25rem;
   color: var(--cor-texto-suave);
 }
 
@@ -643,7 +658,7 @@ ul {
   box-shadow: var(--sombra);
 }
 
-.projeto + .projeto {
+.projeto:not([hidden]) ~ .projeto:not([hidden]) {
   margin-top: 2rem;
 }
 
@@ -742,14 +757,16 @@ ul {
   font-size: 1.2rem;
 }
 
+/* Colunas CSS: a ordem segue de cima para baixo e depois da esquerda para a direita */
 .habilidades {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
+  column-count: 1;
+  column-gap: 0.75rem;
   list-style: none;
 }
 
 .habilidade {
+  break-inside: avoid;
+  margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
   gap: 0.85rem;
@@ -781,11 +798,17 @@ ul {
 }
 
 .habilidade__nivel {
+  display: flex;
+  flex-direction: column;
   font-size: 0.85rem;
+  line-height: 1.4;
   color: var(--cor-texto-suave);
 }
 
+/* inline-flex remove o espaço entre as estrelas cheias e as vazias */
 .estrelas {
+  display: inline-flex;
+  gap: 0.1em;
   color: var(--cor-estrela);
   letter-spacing: 0.08em;
 }
@@ -984,12 +1007,15 @@ ul {
   opacity: 0;
 }
 
+/* "backwards" mantém o estado inicial durante o atraso e libera o elemento
+   ao final, permitindo os efeitos de hover */
 .js .animar.visivel {
-  animation: surgir 0.8s ease-out forwards;
+  opacity: 1;
+  animation: surgir 0.8s ease-out var(--atraso, 0s) backwards;
 }
 
 .js .animar--topo.visivel {
-  animation: deslizar-de-cima 1.6s ease-out forwards;
+  animation: deslizar-de-cima 1.6s ease-out backwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1006,13 +1032,322 @@ ul {
   }
 }
 
-/* 11. RESPONSIVIDADE
+/* 11. INTERATIVIDADE
+   ========================================================================== */
+
+/* --- Navbar compacta ao rolar --- */
+.navbar--rolada {
+  background-color: rgba(12, 12, 12, 0.95);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+.navbar--rolada .navbar__conteudo {
+  height: 60px;
+}
+
+.navbar--rolada .navbar__foto {
+  width: 40px;
+  height: 40px;
+}
+
+/* --- Barra de progresso de leitura --- */
+.progresso-leitura {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: var(--cor-cinza-medio);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* --- Botão voltar ao topo --- */
+.voltar-topo {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--cor-cinza-medio);
+  border-radius: 50%;
+  color: var(--cor-branca);
+  background-color: var(--cor-escura);
+  box-shadow: var(--sombra-forte);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+  transition:
+    opacity var(--transicao),
+    transform var(--transicao),
+    background-color var(--transicao);
+}
+
+.voltar-topo.visivel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.voltar-topo:hover {
+  background-color: var(--cor-destaque);
+}
+
+/* --- Efeito de digitação --- */
+.digitacao--ativa::after {
+  content: "|";
+  margin-left: 2px;
+  font-weight: 400;
+  color: var(--cor-destaque);
+  animation: piscar 1s steps(1) infinite;
+}
+
+@keyframes piscar {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* --- Filtro de projetos --- */
+.filtro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.filtro[hidden] {
+  display: none;
+}
+
+.filtro__rotulo {
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+}
+
+.filtro__botao {
+  padding: 0.4rem 0.95rem;
+  border: 1px solid var(--cor-cinza-medio);
+  border-radius: var(--raio-pequeno);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  background-color: transparent;
+  cursor: pointer;
+  transition:
+    background-color var(--transicao),
+    color var(--transicao),
+    border-color var(--transicao);
+}
+
+.filtro__botao:hover {
+  border-color: var(--cor-escura);
+}
+
+.filtro__botao[aria-pressed="true"] {
+  border-color: var(--cor-escura);
+  color: var(--cor-branca);
+  background-color: var(--cor-escura);
+}
+
+.filtro__resultado {
+  min-height: 1.5em;
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: var(--cor-texto-suave);
+}
+
+.js .projeto.filtrado {
+  opacity: 1;
+  animation: surgir 0.5s ease-out backwards;
+}
+
+/* --- Estrelas que se acendem uma a uma --- */
+.estrela {
+  color: var(--cor-cinza-medio);
+}
+
+.estrela--cheia {
+  color: var(--cor-estrela);
+}
+
+.js .grupo-habilidades.visivel .estrela--cheia {
+  display: inline-block;
+  animation: acender 0.4s ease-out calc(var(--indice) * 0.12s + 0.3s) backwards;
+}
+
+@keyframes acender {
+  from {
+    color: var(--cor-cinza-medio);
+    transform: scale(0.5);
+  }
+
+  60% {
+    transform: scale(1.3);
+  }
+
+  to {
+    color: var(--cor-estrela);
+    transform: scale(1);
+  }
+}
+
+/* --- Cartões com leve elevação (apenas em dispositivos com mouse) --- */
+.cartao,
+.projeto,
+.habilidade {
+  transition:
+    transform var(--transicao),
+    box-shadow var(--transicao);
+}
+
+@media (hover: hover) {
+  .cartao:hover,
+  .projeto:hover,
+  .habilidade:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-forte);
+  }
+}
+
+/* --- Visualizador de certificados --- */
+.visualizador {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 1rem;
+  border: none;
+  background: transparent;
+}
+
+.visualizador[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  animation: surgir 0.3s ease-out;
+}
+
+.visualizador::backdrop {
+  background-color: rgba(12, 12, 12, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.visualizador__figura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: min(1000px, 100%);
+  margin: 0;
+}
+
+.visualizador__imagem {
+  max-height: 75vh;
+  border-radius: var(--raio-pequeno);
+  box-shadow: var(--sombra-forte);
+  background-color: var(--cor-branca);
+}
+
+.visualizador__legenda {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.75rem;
+  text-align: center;
+  color: var(--cor-branca);
+}
+
+.visualizador__legenda span {
+  font-size: 0.85rem;
+  color: var(--cor-cinza-medio);
+}
+
+.visualizador__fechar,
+.visualizador__seta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  font-family: inherit;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--cor-branca);
+  background-color: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: background-color var(--transicao);
+}
+
+.visualizador__fechar:hover,
+.visualizador__seta:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.visualizador__fechar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* No celular as setas ficam abaixo da imagem */
+@media (max-width: 575px) {
+  .visualizador__seta {
+    position: absolute;
+    bottom: 1.25rem;
+  }
+
+  .visualizador__seta--anterior {
+    left: calc(50% - 56px);
+  }
+
+  .visualizador__seta--proxima {
+    right: calc(50% - 56px);
+  }
+
+  .visualizador__imagem {
+    max-height: 65vh;
+  }
+}
+
+/* --- Menos movimento --- */
+@media (prefers-reduced-motion: reduce) {
+  .js .grupo-habilidades.visivel .estrela--cheia,
+  .js .projeto.filtrado,
+  .visualizador[open],
+  .digitacao--ativa::after {
+    animation: none;
+  }
+
+  .cartao,
+  .projeto,
+  .habilidade,
+  .voltar-topo {
+    transition: none;
+  }
+}
+
+/* 12. RESPONSIVIDADE
    ========================================================================== */
 
 /* Celulares grandes */
 @media (min-width: 576px) {
   .habilidades {
-    grid-template-columns: repeat(2, 1fr);
+    column-count: 2;
   }
 }
 
@@ -1057,7 +1392,7 @@ ul {
   }
 
   .habilidades {
-    grid-template-columns: repeat(3, 1fr);
+    column-count: 3;
   }
 }
 
@@ -1116,6 +1451,10 @@ ul {
   .hero__foto {
     width: 320px;
     height: 320px;
+  }
+
+  .hero__cargo {
+    min-height: 1.4em;
   }
 
   .hero__citacao {
